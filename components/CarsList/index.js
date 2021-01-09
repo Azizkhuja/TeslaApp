@@ -11,6 +11,7 @@ const CarsList = (props) => {
       <FlatList
         data={cars}
         renderItem={({ item }) => <CarItem car={item} />}
+        keyExtractor={(item) => item.id}
         snapToAlignment={"start"}
         decelerationRate={"fast"}
         snapToInterval={Dimensions.get("window").height}
